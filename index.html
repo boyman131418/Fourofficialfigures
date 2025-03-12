@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食評論</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ 美食紀錄 </h1>
+            <p>分享您的美食體驗</p>
+        </header>
+
+        <main>
+            <form id="foodForm">
+                <div class="image-section">
+                    <div class="image-upload">
+                        <label for="image1" class="upload-label">
+                            <span>圖片一右下</span>
+                            <span class="upload-icon">📸</span>
+                        </label>
+                        <input type="file" id="image1" class="image-input" accept="image/*">
+                        <div class="preview"></div>
+                    </div>
+
+                    <div class="image-upload">
+                        <label for="image2" class="upload-label">
+                            <span>圖片二左下</span>
+                            <span class="upload-icon">📸</span>
+                        </label>
+                        <input type="file" id="image2" class="image-input" accept="image/*">
+                        <div class="preview"></div>
+                    </div>
+
+                    <div class="image-upload">
+                        <label for="image3" class="upload-label">
+                            <span>圖片三左上</span>
+                            <span class="upload-icon">📸</span>
+                        </label>
+                        <input type="file" id="image3" class="image-input" accept="image/*">
+                        <div class="preview"></div>
+                    </div>
+
+                    <div class="image-upload">
+                        <label for="image4" class="upload-label">
+                            <span>圖片四AI右上</span>
+                            <span class="upload-icon">📸</span>
+                        </label>
+                        <input type="file" id="image4" class="image-input" accept="image/*">
+                        <div class="preview"></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="storeName">店名</label>
+                    <input type="text" id="storeName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">地址</label>
+                    <input type="text" id="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="impression">美食感想</label>
+                    <textarea id="impression" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">電子郵件地址（選填）</label>
+                    <input type="email" id="email" placeholder="example@email.com">
+                </div>
+
+                <button type="submit" class="submit-btn">提交評論</button>
+            </form>
+
+            <div id="loadingOverlay" class="hidden">
+                <div class="loading-spinner"></div>
+                <p>處理中...</p>
+            </div>
+
+            <section id="resultsSection" class="hidden">
+                <h2 id="resultTitle"></h2>
+                <p id="resultContent"></p>
+                <div id="resultImages"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
